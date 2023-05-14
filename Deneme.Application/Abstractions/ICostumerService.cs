@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace Deneme.Application.Abstractions
 {
-    public interface ICostumerServices
+
+    public interface ICostumerService
     {
-        List<Costumer> GetCostumers();
+        List<Customer> GetCostumers();
     }
 }

@@ -1,4 +1,4 @@
-﻿using Deneme2.Models;
+﻿using Deneme.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
