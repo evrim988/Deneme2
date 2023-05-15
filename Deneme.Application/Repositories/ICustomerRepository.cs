@@ -1,7 +1,7 @@
 ﻿using Deneme.Domain.Common;
-using Deneme.Persistence.BaseRepostitory;
+using Deneme.Application.Repositories;
 
-namespace Deneme.Persistence.Repositories.CustomerRepository.Concrete
+namespace Deneme.Application.Repositories
 {
     public interface ICustomerRepository : IBaseRepository<Customer>
     {

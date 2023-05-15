@@ -25,6 +25,11 @@ namespace Deneme.Domain.Common
         [MaxLength(600, ErrorMessage = "{0} {1} karakterden büyük olamaz")]
         public string Adress { get; set; }
 
-      
-	}
+		
+		public string FirmaAdı { get; set; }
+
+        public string EMail { get; set; }
+    }
 }
+//firmadı
+//email

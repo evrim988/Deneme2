@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<DataContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("DenemeDbConnection")));
-builder.Services.EvriminRepostiyoryleri();
+builder.Services.MyRepository();
 
 var app = builder.Build();
 

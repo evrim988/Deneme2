@@ -15,5 +15,7 @@ namespace Deneme.Infastructure.Db
 
         public DbSet<Customer> Customers { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<Ticket> Tickets { get; set; }
     }
 }

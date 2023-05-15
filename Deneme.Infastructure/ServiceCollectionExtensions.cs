@@ -1,12 +1,12 @@
-﻿using Deneme.Persistence.Repositories.CustomerRepository.Abstract;
-using Deneme.Persistence.Repositories.CustomerRepository.Concrete;
+﻿using Deneme.Application.Repositories;
+using Deneme.Infastructure.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Deneme.Persistence
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection EvriminRepostiyoryleri(this IServiceCollection services)
+        public static IServiceCollection MyRepository(this IServiceCollection services)
         {
             services.AddTransient<ICustomerRepository, CustomerRepository>();
 

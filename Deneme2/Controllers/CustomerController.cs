@@ -1,5 +1,5 @@
-﻿using Deneme.Domain.Common;
-using Deneme.Persistence.Repositories.CustomerRepository.Concrete;
+﻿using Deneme.Application.Repositories;
+using Deneme.Domain.Common;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Deneme.WebApp.Controllers

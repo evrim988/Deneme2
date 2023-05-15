@@ -1,22 +1,19 @@
-﻿using Deneme.Domain.Common;
+﻿using Deneme.Application.Repositories;
+using Deneme.Domain.Common;
 using Deneme.Domain.ReponseEntities;
 using Deneme.Infastructure.Db;
-using Deneme.Persistence.Repositories.CustomerRepository.Concrete;
 using Microsoft.EntityFrameworkCore;
 
-namespace Deneme.Persistence.Repositories.CustomerRepository.Abstract
+namespace Deneme.Infastructure.Repositories
 {
     public class CustomerRepository : ICustomerRepository
     {
-
-        //DI customer repository çağıldığında otomatik olarak newleme işlmeni yapıyor.
         private readonly DataContext _dataContext;
 
         public CustomerRepository(DataContext dataContext)
         {
             _dataContext = dataContext;
         }
-
 
         public async Task<BaseReponse<Customer>> Add(Customer model)
         {
@@ -99,6 +96,7 @@ namespace Deneme.Persistence.Repositories.CustomerRepository.Abstract
 
         public async Task<BaseReponse<Customer>> GetList()
         {
+
             return new BaseReponse<Customer>
             {
                 ResultObjects = await _dataContext.Customers.Where(t => !t.IsDeleted).ToListAsync()
@@ -157,3 +155,4 @@ namespace Deneme.Persistence.Repositories.CustomerRepository.Abstract
         }
     }
 }
+
