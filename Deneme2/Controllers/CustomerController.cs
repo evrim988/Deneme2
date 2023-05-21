@@ -12,12 +12,12 @@ namespace Deneme.WebApp.Controllers
             _customerRepository = customerRepository;
         }
 
-        public async Task<IActionResult> List()
+        public async Task<IActionResult> List(DataSourceLoadOptions options)
         {
             return View(await _customerRepository.GetList());
         }
 
-        public IActionResult Add()
+        public IActionResult Index()
         {
             return View();
         }

@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+
+    #range-selector {
+        height: 250px;
+        width: 750px;
+    }
+
+    .clsRed {
+        background-color: #b81616;
+        color: white;
+    }
+</style>
+<link href="~/Content/devextremecss/devextreme/dx.common.css" rel="stylesheet" />
+<link href="~/Content/devextremecss/devextreme/dx.light.css" rel="stylesheet" />
+
+<div class="main-content">
+    <section class="section">
+        <div class="row">
+            <div class="col-12">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3>Müşteriler</h3>
+                         <div class="heading-elements">
+                            <div class="row col-md-3">
+                                @*<a asp-action="CreateCustomer" asp-controller="Customer" class="btn btn-primary"><i class="ion ion-android-add"></i> Yeni Müşteri</a>*@
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content collapse show">
+                        <div class="card-body card-dashboard">
+                            <div class="demo-container">
+                                <div id="customersGridContainer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+@section Scripts
+    {
+
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/19.2.3/js/dx.all.js"></script>
+    <script src="https://cdn3.devexpress.com/jslib/19.2.3/js/localization/dx.messages.tr.js"></script>
+
+    <script src="~/Content/devextremejs/devextreme/aspnet/dx.aspnet.data.js"></script>
+
+    <script src="~/Content/devextremejs/devextreme/cldr.js"></script>
+    <script src="~/Content/devextremejs/devextreme/cldr/event.js"></script>
+    <script src="~/Content/devextremejs/devextreme/cldr/supplemental.js"></script>
+    <script src="~/Content/devextremejs/devextreme/cldr/unresolved.js"></script>
+    <script src="~/Content/devextremejs/devextreme/globalize.js"></script>
+    <script src="~/Content/devextremejs/devextreme/globalize/message.js"></script>
+    <script src="~/Content/devextremejs/devextreme/globalize/number.js"></script>
+    <script src="~/Content/devextremejs/devextreme/globalize/currency.js"></script>
+    <script src="~/Content/devextremejs/devextreme/globalize/date.js"></script>
+    <script src="~/Content/devextremejs/devextreme/jszip.js"></script>
+    <script src="~/Content/devextremejs/devextreme/vectormap-data/world.js"></script>
+
+    <script src="~/Content/devextremejs/devextreme/aspnet/dx.aspnet.mvc.js"></script>
+
+    <script src="~/js/devextreme/localization/dx.messages.tr.js"></script>
+    <script src="~/js/devextreme/localization/dx.messages.en.js"></script>
+
+    <script src="~/js/Page/Customer/Index.js"></script>
+
+    <script type="text/javascript">
+
+
+        $(document).ready(function () {
+
+            $('#liAdmin').addClass("active");
+            $('#liAdmin').addClass("open");
+            $('#liCustomers').addClass("active");
+
+        });
+
+
+    </script>
+}
